@@ -29,4 +29,5 @@ RUN npm install -g \
         yarn@1.3 \
         bower@1.8 \
         grunt@1.0 \
-        gulp@3.9
+        gulp@3.9 \
+        apidoc@0.17
