@@ -2,14 +2,14 @@ FROM centos:7
 
 # Install needed packages
 RUN yum update -y && \ 
-    yum install -y yum-utils
+    yum install -y yum-utils unzip
 
 # Install php
 RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
     yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm && \
     yum-config-manager --enable remi-php72 && \
     yum install -y php php-cli php-fpm php-gd php-ldap php-mbstring php-mcrypt php-mysql php-pdo \
-                   php-pecl-redis php-pecl-xdebug php-pecl-amqp php-soap php-xml php-bcmath
+                   php-pecl-redis php-pecl-xdebug php-pecl-amqp php-soap php-xml php-bcmath php-zip
 
 # Install composer
 RUN cd /tmp && \
